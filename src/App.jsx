@@ -1,20 +1,31 @@
 import Navbar from "./Components/navbar";
+import cat from "./Assets/cat.png";
 
 const App = () => {
   return (
     <div className="bg-[#1c3144] h-screen w-screen">
       <Navbar />
       <div className="flex justify-center">
-        <div className="absolute top-20 left-20 w-64 h-64 bg-[#FF9F1C] rounded-full opacity-50 animate-move1"></div>
+        <img
+          src="src/Assets/shuttle.svg"
+          alt="left blob"
+          className="absolute -top-80 -left-10 rotate-12 opacity-80 animate-move1 scale-50"
+        />
         <div className="mt-70 text-5xl z-10 text-gray-400 group">
           <h1>
             Turning{" "}
-            <span className="group relative inline-flex items-center font-londrina text-yellow-300 hover:text-yellow-200 transition-all hover:text-6xl duration-500">
+            <span
+              className="group relative inline-flex items-center
+              font-rubikdist text-yellow-300
+              transition-all duration-300 ease-out
+              hover:text-yellow-200
+              hover:scale-110 hover:rotate-6"
+            >
               Ideas
               <img
                 src="src/Assets/lightbulb.svg"
                 alt="idea"
-                className="absolute -top-6.5 right-27 w-10 h-10
+                className="absolute -top-6.5 right-26 w-10 h-10
                opacity-0 scale-75
                group-hover:scale-100
                group-hover:-rotate-400
@@ -28,7 +39,11 @@ const App = () => {
             Web Electronics Robotics
           </p>
         </div>
-        <div className="absolute bottom-49 right-90 w-38 h-38 bg-[#E71D36] opacity-70 rounded-full animate-move2"></div>
+        <img
+          src={cat}
+          alt="right blob"
+          className="absolute scale-30 right-1/8 animate-move2"
+        />
       </div>
       <svg
         className="absolute bottom-0 w-full h-64"

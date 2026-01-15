@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Smooch+Sans:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Gloria+Hallelujah&family=Luckiest+Guy&family=Smooch+Sans:wght@100..900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Londrina+Outline&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Burned&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Londrina+Outline&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Distressed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Burned&display=swap");
 
 @import "tailwindcss";
 
@@ -12,6 +13,7 @@
   --font-gloria: "Gloria Hallelujah", monospace;
   --font-londrina: "Londrina Outline";
   --font-rubik: "Rubik Burned";
+  --font-rubikdist: "Rubik Distressed";
 
   --animate-wiggle: wiggle 0.5s ease-in-out infinite;
   @keyframes wiggle {
@@ -28,23 +30,25 @@
   @keyframes move1 {
     0%,
     100% {
-      transform: translate(0, 10%);
+      transform: translate(0, 10vh);
     }
     50% {
-      transform: translate(0, 20%);
+      transform: translate(0, 15vh);
     }
   }
 
-    --animate-move2: move2 6s ease infinite 1s;
-  @keyframes move2 {
-    0%,
-    100% {
-      transform: translate(10%, 10%);
-    }
-    50% {
-      transform: translate(5%, 50%);
-    }
+  --animate-move2: moveSpin2 16s linear infinite;
+  @keyframes moveSpin2 {
+  0% {
+    transform: translate(10vw, 60vh) rotate(0deg);
   }
+  50% {
+    transform: translate(5vw, 30vh) rotate(360deg);
+  }
+  100% {
+    transform: translate(10vw, 60vh) rotate(720deg);
+  }
+}
 }
 
 :root {
