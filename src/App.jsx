@@ -1,60 +1,57 @@
 import Navbar from "./Components/navbar";
-import cat from "./Assets/cat.png";
+import About from "./Sections/about";
+import Footer from "./Sections/footer";
+import Hero from "./Sections/hero";
+import Skills from "./Sections/skills";
 
 const App = () => {
   return (
-    <div className="bg-[#1c3144] h-screen w-screen">
+    <div className="bg-[#1c3144] min-h-screen w-screen flex flex-col">
       <Navbar />
-      <div className="flex justify-center">
-        <img
-          src="src/Assets/shuttle.svg"
-          alt="left blob"
-          className="absolute -top-80 -left-10 rotate-12 opacity-80 animate-move1 scale-50"
-        />
-        <div className="mt-70 text-5xl z-10 text-gray-400 group">
-          <h1>
-            Turning{" "}
-            <span
-              className="group relative inline-flex items-center
-              font-rubikdist text-yellow-300
-              transition-all duration-300 ease-out
-              hover:text-yellow-200
-              hover:scale-110 hover:rotate-6"
-            >
-              Ideas
-              <img
-                src="src/Assets/lightbulb.svg"
-                alt="idea"
-                className="absolute -top-6.5 right-26 w-10 h-10
-               opacity-0 scale-75
-               group-hover:scale-100
-               group-hover:-rotate-400
-               group-hover:opacity-100
-               transition-all duration-400"
-              />
-            </span>{" "}
-            Into <span className="text-red-400 font-bold">Action</span>
-          </h1>
-          <p className="text-zinc-300 text-2xl text-center mt-3 font-extralight">
-            Web Electronics Robotics
-          </p>
-        </div>
-        <img
-          src={cat}
-          alt="right blob"
-          className="absolute scale-30 right-1/8 animate-move2"
-        />
-      </div>
-      <svg
-        className="absolute bottom-0 w-full h-64"
-        viewBox="0 0 1400 320"
-        preserveAspectRatio="none"
-      >
-        <path
-          fill="#D1855C"
-          d="M0,64L48,85.3C96,107,192,149,288,165.3C384,181,480,171,576,165.3C672,160,768,160,864,176C960,192,1056,224,1152,224C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-        ></path>
-      </svg>
+
+      <main className="flex-1">
+        {/* HERO + CANYONS */}
+        <section className="relative min-h-screen overflow-hidden">
+          <Hero />
+
+          {/* BACK CANYON */}
+          <svg
+            className="absolute bottom-0 w-full h-74 z-0"
+            viewBox="0 10 1300 410"
+            preserveAspectRatio="none"
+          >
+            <path
+              fill="#E16531"
+              d="M 0 132 L 92 119 C 146 107 203 136 239 147
+                 C 335 185 405 182 536 135
+                 C 629 81 753 140 864 176
+                 C 930 207 984 144 1108 150
+                 C 1271 200 1306 128 1364 152
+                 L 1440 320 L 0 320 Z"
+            />
+          </svg>
+
+          {/* FRONT CANYON */}
+          <svg
+            className="absolute bottom-0 w-full h-64 z-10"
+            viewBox="0 -5 1400 320"
+            preserveAspectRatio="none"
+          >
+            <path
+              fill="#D1855C"
+              d="M -3 116 L 39 100 C 92 90 192 149 286 119
+                 C 391 96 480 171 576 165.3
+                 C 672 160 753 233 864 176
+                 C 981 114 1030 177 1158 201
+                 C 1248 224 1314 182 1398 163
+                 L 1440 320 L 0 320 Z"
+            />
+          </svg>
+        </section>
+        <About />
+        <Skills />
+      </main>
+      <Footer />
     </div>
   );
 };
