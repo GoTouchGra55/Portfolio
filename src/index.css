@@ -4,12 +4,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Londrina+Outline&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Distressed&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Burned&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
 
 @import "tailwindcss";
 
 @theme {
   --font-smooch: "Smooch Sans", monospace;
   --font-caveat: "Caveat", monospace;
+  --font-caveatbrush: "Caveat Brush";
   --font-gloria: "Gloria Hallelujah", monospace;
   --font-londrina: "Londrina Outline";
   --font-rubik: "Rubik Burned";

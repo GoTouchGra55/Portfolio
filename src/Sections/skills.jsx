@@ -20,6 +20,7 @@ import {
   SiGit,
   SiGithub,
   SiGnubash,
+  SiVercel,
 } from "react-icons/si";
 
 const skills = [
@@ -43,10 +44,10 @@ const skills = [
   },
   {
     name: "JavaScript",
-    icon: <SiJavascript className="w-10 h-10 text-yellow-300" />,
+    icon: <SiJavascript className="w-8 h-10 text-yellow-300" />,
   },
   { name: "Netlify", icon: <SiNetlify className="w-10 h-10 text-blue-400" /> },
-  { name: "Vercel", icon: <SiVercel className="w-10 h-10 text-blue-400" /> },
+  { name: "Vercel", icon: <SiVercel className="w-8 h-8 text-white" /> },
   { name: "Python", icon: <SiPython className="w-10 h-10 text-yellow-300" /> },
   { name: "C", icon: <SiC className="w-10 h-10 text-blue-600" /> },
   { name: "C++", icon: <SiCplusplus className="w-10 h-10 text-blue-600" /> },
@@ -67,19 +68,19 @@ const skills = [
 
 const Skills = () => {
   return (
-    <div id="skills" className="bg-[#D1855C] w-screen h-80">
+    <div id="skills" className="bg-[#D1855C] w-screen py-20 px-10 -mt-20">
+      <div className="text-center mb-5">
+        <h1 className="text-[3rem] font-caveatbrush text-black">What can I do?</h1>
+      </div>
       <section className="w-screen flex justify-center">
-        <h1 className="absolute -bottom-90 left-1/6 z-30 text-[2.3rem] font-gloria">
-          What can I do?
-        </h1>
-        <div className="flex flex-row flex-wrap max-w-[80vw] mt-6 gap-1">
+        <div className="flex flex-row flex-wrap max-w-[70vw] gap-1">
           {skills.map((skill, idx) => (
             <div
               key={idx}
-              className="flex flex-row bg-gray-800 rounded-bl-2xl rounded-tr-2xl rounded-sm p-1 overflow-clip"
+              className="flex flex-row bg-gray-800 rounded-bl-2xl rounded-tr-2xl rounded-sm p-2 items-center"
             >
               {skill.icon}
-              <span className="text-white text-xl mt-1 px-1">{skill.name}</span>
+              <span className="text-white text-xl ml-2">{skill.name}</span>
             </div>
           ))}
         </div>
@@ -87,5 +88,6 @@ const Skills = () => {
     </div>
   );
 };
+
 
 export default Skills;
