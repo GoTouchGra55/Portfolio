@@ -3,12 +3,12 @@ import About from "./Sections/about";
 import Footer from "./Sections/footer";
 import Hero from "./Sections/hero";
 import Skills from "./Sections/skills";
+import Projects from "./Sections/projects";
 
 const App = () => {
   return (
     <div className="bg-[#1c3144] min-h-screen w-screen flex flex-col">
       <Navbar />
-
       <main className="flex-1">
         {/* HERO + CANYONS */}
         <section className="relative min-h-screen overflow-hidden">
@@ -16,7 +16,7 @@ const App = () => {
 
           {/* BACK CANYON */}
           <svg
-            className="absolute bottom-0 w-full h-74 z-0"
+            className="absolute bottom-0 w-[101vw] h-74 z-0 animate-canyon [animation-delay:3000ms]"
             viewBox="0 10 1300 410"
             preserveAspectRatio="none"
           >
@@ -33,7 +33,7 @@ const App = () => {
 
           {/* FRONT CANYON */}
           <svg
-            className="absolute bottom-0 w-full h-64 z-10"
+            className="absolute bottom-0 w-[105vw] h-64 z-10 animate-canyon"
             viewBox="0 -5 1400 320"
             preserveAspectRatio="none"
           >
@@ -50,6 +50,7 @@ const App = () => {
         </section>
         <About />
         <Skills />
+        <Projects />
       </main>
       <Footer />
     </div>

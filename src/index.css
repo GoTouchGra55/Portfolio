@@ -4,7 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Londrina+Outline&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Distressed&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Burned&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap");
 
 @import "tailwindcss";
 
@@ -41,16 +41,27 @@
 
   --animate-move2: moveSpin2 16s linear infinite;
   @keyframes moveSpin2 {
-  0% {
-    transform: translate(10vw, 60vh) rotate(0deg);
+    0% {
+      transform: translate(10vw, 60vh) rotate(0deg);
+    }
+    50% {
+      transform: translate(5vw, 30vh) rotate(360deg);
+    }
+    100% {
+      transform: translate(10vw, 60vh) rotate(720deg);
+    }
   }
-  50% {
-    transform: translate(5vw, 30vh) rotate(360deg);
+
+  --animate-canyon: canyon 6s linear infinite;
+  @keyframes canyon {
+    0%,
+    100% {
+      transform: translateX(-2vw);
+    }
+    50% {
+      transform: translateX(2vw);
+    }
   }
-  100% {
-    transform: translate(10vw, 60vh) rotate(720deg);
-  }
-}
 }
 
 :root {
