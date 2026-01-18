@@ -1,22 +1,27 @@
+import blackjack from "../Assets/blackjack.png";
+import impactor from "../Assets/impactor.png";
+import cshell from "../Assets/cshell.png";
+import scraper from "../Assets/scraper.png";
+
 const works = [
   {
     name: "RL Blackjack Agent",
-    image: "src/Assets/blackjack.png", // replace with actual screenshot
+    image: blackjack,
     link: "https://github.com/GoTouchGra55/blackjack-agent",
   },
   {
     name: "Impactor 2025",
-    image: "src/Assets/impactor.png",
+    image: impactor,
     link: "https://github.com/GoTouchGra55/Impactor-2025",
   },
   {
     name: "C Shell",
-    image: "src/Assets/cshell.png",
+    image: cshell,
     link: "https://github.com/GoTouchGra55/C-shell",
   },
   {
     name: "Web Scraper",
-    image: "src/Assets/scraper.png",
+    image: scraper,
     link: "https://github.com/GoTouchGra55/Scrapy-Scraper",
   },
 ];
