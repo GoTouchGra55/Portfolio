@@ -4,7 +4,7 @@ const About = () => {
   return (
     <section
       id="aboutme"
-      className="relative w-screen max-h-[90vh] bg-[#D1855C] px-6 py-24"
+      className="relative w-screen bg-[#D1855C] px-6 py-24"
     >
       {/* Section title */}
       <div className="max-w-5xl mx-auto mb-5">

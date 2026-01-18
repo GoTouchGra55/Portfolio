@@ -20,7 +20,7 @@ const contacts = [
     id: 4,
     icon: <SiGithub size={30} />,
     link: "https://github.com/GoTouchGra55",
-  }
+  },
 ];
 
 const Contact = () => {
@@ -32,7 +32,7 @@ const Contact = () => {
       <img
         src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzN6c3ZyNHB2Y29ibHozN201bnJ3dXFnZnhvN2ExcXhkYnJrcnAxYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/GxcptIyuOwo1CjnIl1/giphy.gif"
         alt="Coding"
-        className="scale-50"
+        className="w-100 h-100 hidden md:inline-block my-20"
       />
       <section className="px-10 flex flex-col">
         <h1 className="font-caveatbrush text-[#3A2A1F] py-5 text-5xl">
@@ -49,7 +49,7 @@ const Contact = () => {
           I’m open to collaborations, research discussions, and meaningful
           projects.
         </p>
-        <div className="flex gap-5 mt-5 justify-left text-gray-950">
+        <div className="flex gap-5 my-5 justify-left text-gray-950">
           {contacts.map((contact) => (
             <a
               key={contact.id}
