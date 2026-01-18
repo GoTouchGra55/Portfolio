@@ -4,6 +4,7 @@ import Footer from "./Sections/footer";
 import Hero from "./Sections/hero";
 import Skills from "./Sections/skills";
 import Projects from "./Sections/projects";
+import Contact from "./Sections/contact";
 
 const App = () => {
   return (
@@ -51,6 +52,7 @@ const App = () => {
         <About />
         <Skills />
         <Projects />
+        <Contact />
       </main>
       <Footer />
     </div>

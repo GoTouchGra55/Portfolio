@@ -9,14 +9,14 @@ const Hero = () => {
       <img
         src={shuttle}
         alt="left blob"
-        className="absolute -bottom-30 -left-2 rotate-12 opacity-80 scale-50 animate-move1 pointer-events-none z-0"
+        className="absolute -top-10 left-1/5 w-74 rotate-12 opacity-80 animate-move1"
       />
 
       {/* RIGHT ASSET */}
       <img
         src={cat}
         alt="right blob"
-        className="absolute bottom-[20%] right-[12%] scale-30 animate-move2 pointer-events-none z-0"
+        className="absolute top-8 right-1/3 w-30 animate-move2"
       />
 
       {/* HERO CONTENT */}
