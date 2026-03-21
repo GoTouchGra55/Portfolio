@@ -8,8 +8,8 @@ import Contact from "./Sections/contact";
 
 const App = () => {
   return (
-    <div className="bg-[#1c3144] min-h-screen w-screen flex flex-col">
-      <Navbar />
+    <div className="bg-[#1c3144] min-h-screen w-screen flex flex-col overflow-hidden">
+      <Navbar/>
       <main className="flex-1">
         {/* HERO + CANYONS */}
         <section className="relative min-h-screen overflow-hidden">

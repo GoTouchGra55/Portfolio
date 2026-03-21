@@ -2,9 +2,9 @@ const navItems = ["About Me", "Skills", "Projects", "Contact"];
 
 const Navbar = () => {
   return (
-    <div className="fixed top-0 flex bg-linear-to-b from-gray-800/30 to-gray-800/5 backdrop-blur-xs w-screen h-25 font-sans text-2xl text-white justify-between items-center px-10 z-50">
+    <div className="fixed top-0 flex bg-linear-to-b from-gray-800/30 to-gray-800/5 backdrop-blur-xs w-screen h-23 font-sans text-2xl text-white justify-between items-center px-10 z-50">
       <section>
-        <div className="hero ml-20 text-4xl text-blue-200 font-gloria">
+        <div className="hero md:ml-20 ml-2 text-4xl text-blue-200 font-gloria">
           Shaurya Tamang
         </div>
       </section>

@@ -2,27 +2,53 @@ import blackjack from "../Assets/blackjack.png";
 import impactor from "../Assets/impactor.png";
 import cshell from "../Assets/cshell.png";
 import scraper from "../Assets/scraper.png";
+import duodec from "../Assets/duodec.png";
+import cheetah from "../Assets/MIT_Cheetah.jpg";
+
+import Projectcard from "../Components/projectcard";
 
 const works = [
+  {
+    name: "Duodec",
+    image: duodec,
+    link: "https://github.com/GoTouchGra55/Duodec",
+    category: "Hardware",
+    tech: ["KiCad", "RP2040", "KMK"],
+  },
+  {
+    name: "🚧 J.O.L.T 🚧 🛠️",
+    image: cheetah,
+    link: "https://github.com/GoTouchGra55/JOLT",
+    category: "Robotics",
+    tech: ["STM32", "FreeCAD", "KiCAD", "C/HAL"],
+  },
   {
     name: "RL Blackjack Agent",
     image: blackjack,
     link: "https://github.com/GoTouchGra55/blackjack-agent",
+    category: "ML",
+    tech: ["Python", "OpenAI Gym"],
   },
   {
     name: "Impactor 2025",
     image: impactor,
     link: "https://github.com/GoTouchGra55/Impactor-2025",
+    category: "Web",
+    tech: ["React", "Tailwind"],
   },
   {
     name: "C Shell",
     image: cshell,
     link: "https://github.com/GoTouchGra55/C-shell",
+    category: "Systems",
+    tech: ["C", "Unix"],
   },
   {
     name: "Web Scraper",
     image: scraper,
     link: "https://github.com/GoTouchGra55/Scrapy-Scraper",
+    category: "Python",
+    tech: ["Python", "Scrapy"],
   },
 ];
 
@@ -30,51 +56,36 @@ const Projects = () => {
   return (
     <div
       id="projects"
-      className="bg-[#D1855C] w-screen py-20 px-10 -mt-20 flex flex-col justify-center items-center"
+      className="bg-[#D1855C] w-screen py-20 -mt-20 flex flex-col justify-center items-center"
     >
       {/* Section Header */}
-      <h1 className="text-[3rem] font-caveatbrush text-[#3A2A1F] mb-12 text-center">
-        Here's some of my work (^-^)
+      <h1 className="text-[3rem] font-caveatbrush text-[#3A2A1F] md:mb-27 mb-30 text-center">
+        Here's some of my work (^~^)
       </h1>
 
       {/* Projects Grid */}
-      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 justify-items-center">
-        {works.map((work, idx) => (
-          <div
-            key={idx}
-            className="flex flex-col items-center bg-linear-to-br from-[#292B3E] to-[#1E1E2F] rounded-3xl shadow-2xl shadow-[#1E1E2F] overflow-hidden w-72 hover:scale-105 hover:shadow-3xl hover:shadow-[#1E1E2F]/70 transition-all duration-300 px-5 py-4"
-          >
-            {/* Project Image */}
-            <img
-              src={work.image}
-              alt={work.name}
-              className="w-full h-44 object-cover rounded-xl border-2 border-[#38BDF8] mb-4"
-            />
-
-            {/* Project Title */}
-            <h2 className="text-xl font-semibold text-[#7DD3FC] text-center mb-2">
-              {work.name}
-            </h2>
-
-            {/* Project Description (optional) */}
-            {work.description && (
-              <p className="text-neutral-300 text-center text-sm mb-4 px-2">
-                {work.description}
-              </p>
-            )}
-
-            {/* GitHub / Live Link */}
-            <a
-              href={work.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-auto px-6 py-2 bg-[#22C55E] text-[#1E1E2F] rounded-full font-medium hover:bg-[#16A34A] transition-colors duration-200"
-            >
-              Have a Look
-            </a>
+      <div className="flex w-full">
+        {works.length < 5 ? (
+          <ul className="flex gap-5 -mt-5 justify-items-center animate-infinite-scroll hover:[animation-play-state:paused]">
+            {[...works, ...works, ...works, ...works].map((work, idx) => (
+              <Projectcard key={idx} work={work} />
+            ))}
+          </ul>
+        ) : (
+          <div className="flex flex-col md:mb-20 mb-30">
+            <ul className="flex gap-2 justify-items-center animate-infinite-scroll rotate-2 -mb-50">
+              {[...works, ...works, ...works, ...works].map((work, idx) => (
+                <Projectcard key={idx} work={work} />
+              ))}
+            </ul>
+            <ul className="flex gap-2 justify-items-center animate-infinite-scroll-opp -rotate-2">
+              {[...works, ...works, ...works, ...works].map((work, idx) => (
+                <Projectcard key={idx} work={work} />
+              ))}
+            </ul>
           </div>
-        ))}
-      </section>
+        )}
+      </div>
     </div>
   );
 };
