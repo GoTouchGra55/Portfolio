@@ -18,7 +18,7 @@ const works = [
   {
     name: "🚧 J.O.L.T 🚧 🛠️",
     image: cheetah,
-    link: "https://github.com/GoTouchGra55/JOLT",
+    link: "https://github.com/GoTouchGra55/J.O.L.T",
     category: "Robotics",
     tech: ["STM32", "FreeCAD", "KiCAD", "C/HAL"],
   },
