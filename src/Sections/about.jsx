@@ -2,10 +2,7 @@ import boy from "../Assets/boy.svg";
 
 const About = () => {
   return (
-    <section
-      id="aboutme"
-      className="relative w-screen bg-[#D1855C] px-6 py-24"
-    >
+    <section id="aboutme" className="relative w-screen bg-[#D1855C] px-6 py-24">
       {/* Section title */}
       <div className="max-w-5xl mx-auto mb-5">
         <h1 className="relative group text-[3rem] font-caveatbrush text-[#3A2A1F] inline-block">
@@ -15,12 +12,17 @@ const About = () => {
             alt="What's up?"
             className="
               absolute
+              opacity-0
               w-20
-              top-55
-              right-17
+              ml-[45vw]
+              mt-[17vh]
+              md:ml-[15vw]
+              md:mt-[10vw]
               rotate-75
               transition-all duration-300
-              group-hover:-right-15
+              group-hover:opacity-100
+              group-hover:ml-[56vw]
+              md:group-hover:ml-[21vw]
             "
           />
         </h1>
