@@ -21,6 +21,9 @@ import {
   SiGithub,
   SiGnubash,
   SiVercel,
+  SiStmicroelectronics,
+  SiKicad,
+  SiFreecad,
 } from "react-icons/si";
 
 const skills = [
@@ -109,6 +112,21 @@ const skills = [
     category: "ML & Robotics",
     icon: <SiArduino className="w-10 h-10 text-blue-400" />,
   },
+  {
+    name: "STM32",
+    category: "ML & Robotics",
+    icon: <SiStmicroelectronics className="w-10 h-10 text-blue-400" />,
+  },
+  {
+    name: "KiCAD",
+    category: "ML & Robotics",
+    icon: <SiKicad className="w-10 h-10 text-blue-400" />,
+  },
+  {
+    name: "FreeCAD",
+    category: "ML & Robotics",
+    icon: <SiFreecad className="w-10 h-10 text-red-400" />,
+  },
 
   // DevOps & Infrastructure
   {
@@ -162,7 +180,7 @@ const Skills = () => {
       <section className="flex flex-wrap justify-center gap-10 max-w-[90vw] mx-auto">
         {categories.map((category) => {
           const categorySkills = skills.filter(
-            (skill) => skill.category === category
+            (skill) => skill.category === category,
           );
           return (
             <div key={category}>
