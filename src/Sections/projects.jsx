@@ -4,6 +4,8 @@ import cshell from "../Assets/cshell.png";
 import scraper from "../Assets/scraper.png";
 import duodec from "../Assets/duodec.png";
 import cheetah from "../Assets/MIT_Cheetah.jpg";
+import gravitas from "../Assets/GRAVITAS.png";
+import not618 from "../Assets/NOT-618.png";
 
 import Projectcard from "../Components/projectcard";
 
@@ -21,6 +23,20 @@ const works = [
     link: "https://github.com/GoTouchGra55/J.O.L.T",
     category: "Robotics",
     tech: ["STM32", "FreeCAD", "KiCAD", "C/HAL"],
+  },
+  {
+    name: "🚧 Gravitas 🚧 🛠️",
+    image: gravitas,
+    link: "https://github.com/GoTouchGra55/GRAVITAS",
+    category: "Robotics",
+    tech: ["STM32", "KiCAD", "C/HAL"],
+  },
+  {
+    name: "🚧 NOT-618 🚧 🛠️",
+    image: not618,
+    link: "https://cad.onshape.com/documents/e82edfc86bb0a1665cdc75ee/w/ca3abfddd82f0954c06884bb/e/6fbd4bded61cf9b65a4d5030",
+    category: "Robotics",
+    tech: ["STM32", "Onshape", "KiCAD", "C/HAL"],
   },
   {
     name: "RL Blackjack Agent",
