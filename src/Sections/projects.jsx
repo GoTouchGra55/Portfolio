@@ -75,21 +75,21 @@ const Projects = () => {
       className="bg-[#D1855C] w-screen py-20 -mt-20 flex flex-col justify-center items-center"
     >
       {/* Section Header */}
-      <h1 className="text-[3rem] font-caveatbrush text-[#3A2A1F] md:mb-27 mb-30 text-center">
+      <h1 className="text-[3rem] font-caveatbrush text-[#3A2A1F] md:mb-47 mb-40 text-center">
         Here's some of my work (^~^)
       </h1>
 
       {/* Projects Grid */}
       <div className="flex w-full">
         {works.length < 5 ? (
-          <ul className="flex gap-5 -mt-5 justify-items-center animate-infinite-scroll hover:[animation-play-state:paused]">
+          <ul className="flex gap-5 -mt-15 justify-items-center animate-infinite-scroll hover:[animation-play-state:paused]">
             {[...works, ...works, ...works, ...works].map((work, idx) => (
               <Projectcard key={idx} work={work} />
             ))}
           </ul>
         ) : (
           <div className="flex flex-col md:mb-20 mb-30">
-            <ul className="flex gap-2 justify-items-center animate-infinite-scroll rotate-2 -mb-50">
+            <ul className="flex gap-2 justify-items-center animate-infinite-scroll rotate-2 -mb-70">
               {[...works, ...works, ...works, ...works].map((work, idx) => (
                 <Projectcard key={idx} work={work} />
               ))}
